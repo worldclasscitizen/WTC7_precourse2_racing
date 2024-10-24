@@ -13,7 +13,7 @@ public class OutputView {
 
     public static void printRaceStatus(List<Car> cars) {
         StringBuilder output = new StringBuilder();
-        for(Car car : cars) {
+        for (Car car : cars) {
             output.append(car.getStatus())
                     .append(System.lineSeparator());
         }
