@@ -29,7 +29,7 @@ public class Computer {
     }
 
     public void prepareGame(List<Car> cars, int times) {
-        this.cars = new ArrayList<>();
+        this.cars = new ArrayList<>(cars);
         this.times = times;
     }
 
