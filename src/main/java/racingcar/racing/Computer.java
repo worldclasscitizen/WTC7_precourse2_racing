@@ -20,6 +20,10 @@ public class Computer {
         this.cars = cars;
     }
 
+    public List<Car> getCars() {
+        return cars;
+    }
+
     public int getTimes() {
         return times;
     }
