@@ -8,7 +8,13 @@ import java.util.Set;
 
 public class InputValidator {
     public static final int MAX_CAR_NAME_LENGTH = 5;
-    public static void validateCarName(List<Car> cars) {
+
+    public static void validateInputs(List<Car> cars, int times) {
+        validateCarName(cars);
+        validateAttemptTimes(times);
+    }
+
+    private static void validateCarName(List<Car> cars) {
         Set<String> carNames = new HashSet<>();
 
         for(Car car : cars) {
@@ -30,7 +36,7 @@ public class InputValidator {
         }
     }
 
-    public static void validateAttemptTimes(int times) {
+    private static void validateAttemptTimes(int times) {
         if(times <= 0) {
             throw new IllegalArgumentException(ErrorMessage.NOT_NATURAL_NUMBER_ERROR_MESSAGE.getMessage());
         }
