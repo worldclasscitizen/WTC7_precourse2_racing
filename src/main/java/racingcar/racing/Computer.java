@@ -1,6 +1,7 @@
 package racingcar.racing;
 
 import camp.nextstep.edu.missionutils.Randoms;
+import racingcar.util.ErrorMessage;
 import racingcar.util.Validator;
 
 import java.util.ArrayList;
@@ -53,7 +54,7 @@ public class Computer {
         return cars.stream()
                 .mapToInt(Car::getPosition)
                 .max()
-                .orElseThrow(() -> new IllegalArgumentException("[ERROR] position 값을 찾을 수 없습니다."));
+                .orElseThrow(() -> new IllegalStateException(ErrorMessage.INVALID_POSITION_ERROR_MESSAGE.getMessage()));
     }
 
     private List<Car> selectWinners(int maxPosition) {
