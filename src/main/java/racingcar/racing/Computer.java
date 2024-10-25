@@ -17,10 +17,6 @@ public class Computer {
         this.cars = new ArrayList<>();
     }
 
-    public Computer(List<Car> cars) {
-        this.cars = cars;
-    }
-
     public List<Car> getCars() {
         return cars;
     }
