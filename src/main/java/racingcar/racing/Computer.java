@@ -10,7 +10,7 @@ public class Computer {
     private final int MIN_RANDOM_NUMBER_RANGE = 0;
     private final int MAX_RANDOM_NUMBER_RANGE = 9;
     private List<Car> cars;
-    private int times;
+    private int attemptTimes;
 
     public Computer() {
         this.cars = new ArrayList<>();
@@ -24,13 +24,13 @@ public class Computer {
         return cars;
     }
 
-    public int getTimes() {
-        return times;
+    public int getAttemptTimes() {
+        return attemptTimes;
     }
 
-    public void prepareGame(List<Car> cars, int times) {
+    public void prepareGame(List<Car> cars, int attemptTimes) {
         this.cars = new ArrayList<>(cars);
-        this.times = times;
+        this.attemptTimes = attemptTimes;
     }
 
     public void moveCars() {
