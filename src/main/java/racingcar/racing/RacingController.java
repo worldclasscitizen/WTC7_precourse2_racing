@@ -23,16 +23,16 @@ public class RacingController {
 
     private void initializeGame() {
         List<Car> cars = InputView.readCarNames();
-        int times = InputView.readAttemptTimes();
+        int attemptTimes = InputView.readAttemptTimes();
 
-        InputValidator.validateInputs(cars, times);
+        InputValidator.validateInputs(cars, attemptTimes);
 
-        computer.prepareGame(cars, times);
+        computer.prepareGame(cars, attemptTimes);
     }
 
     private void race() {
         OutputView.printResult();
-        int totalRounds = computer.getTimes();
+        int totalRounds = computer.getAttemptTimes();
 
         for (int round = 0; round < totalRounds; round++) {
             computer.moveCars();
