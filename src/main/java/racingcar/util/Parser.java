@@ -9,9 +9,11 @@ public class Parser {
     public static List<Car> convertInputToCars(String userInput) {
         String[] names = userInput.split(",");
         List<Car> cars = new ArrayList<>();
+
         for (String name : names) {
             cars.add(new Car(name.trim()));
         }
+
         return cars;
     }
 
@@ -19,7 +21,7 @@ public class Parser {
         try {
             return Integer.parseInt(userInput.trim());
         } catch (NumberFormatException e) {
-            throw new IllegalArgumentException("정수가 아닙니다.");
+            throw new IllegalArgumentException(ErrorMessage.INVALID_NUMBER_FORMAT_ERROR_MESSAGE.getMessage());
         }
     }
 }
