@@ -5,6 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import racingcar.racing.Car;
 import racingcar.racing.Computer;
+import racingcar.util.ErrorMessage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +30,8 @@ public class RacingTest {
         cars.add(car2);
         cars.add(car3);
 
-        computer = new Computer(cars);
+        int attemptTimes = 5; // 적절한 시도 횟수 값 설정
+        computer.prepareGame(cars, attemptTimes);
     }
 
     @DisplayName("Car 객체가 1회 움직이면 위치는 1이어야 한다.")
@@ -94,6 +96,6 @@ public class RacingTest {
         // then : IllegalArgumentException 발생 여부 확인
         Exception exception = assertThrows(IllegalArgumentException.class, emptyComputer::determineWinners);
 
-        assertEquals("[ERROR] 자동차 목록이 비어 있습니다.\n", exception.getMessage());
+        assertEquals(ErrorMessage.CAR_LIST_EMPTY_ERROR_MESSAGE.getMessage(), exception.getMessage());
     }
 }
