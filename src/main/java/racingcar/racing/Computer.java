@@ -35,7 +35,7 @@ public class Computer {
 
     public void moveCars() {
         cars.forEach(car -> {
-            if(shouldMove()) {
+            if (shouldMove()) {
                 car.movePosition();
             }
         });
@@ -59,8 +59,8 @@ public class Computer {
     private List<Car> selectWinners(int maxPosition) {
         List<Car> winners = new ArrayList<>();
 
-        for(Car car : cars) {
-            if(car.getPosition() == maxPosition) {
+        for (Car car : cars) {
+            if (car.getPosition() == maxPosition) {
                 winners.add(car);
             }
         }

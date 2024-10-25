@@ -8,9 +8,13 @@ public class Car {
         this.name = name;
     }
 
-    public String getCarName() { return name; }
+    public String getCarName() {
+        return name;
+    }
 
-    public int getPosition() { return position; }
+    public int getPosition() {
+        return position;
+    }
 
     public String getStatus() {
         return name + " : " + "-".repeat(position);
