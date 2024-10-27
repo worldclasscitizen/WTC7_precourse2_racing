@@ -49,7 +49,7 @@ project/
 
 ## 💭 클래스 다이어그램
 
-{ 일단 빈칸 }
+<img width="1054" alt="클래스 다이어그램" src="https://github.com/user-attachments/assets/42a48ea4-ec8f-4561-b543-39f44e300849">
 
 ---
 
